@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Vente</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/91cdff5e02.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bienvenue chez Audi d'occasions</h1>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher un article...">
+        </div>
+        <div id="cart">
+            <button id="cart-button" onclick="toggleCart()">Panier<span id="cart-count">0</span></button>
+        </div>
+    </header>
+    <main>
+        <section id="products">
+            <article class="product">
+                <img src="img/s3.png" alt="Audi S3">
+                <h2>Audi S3</h2>
+                <p>Prix: 65 000 €</p>
+                <button onclick="addToCart('Audi S3', 65000, 'img/s3.png')">Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="img/rs3.png" alt="Audi RS3">
+                <h2>Audi RS3</h2>
+                <p>Prix: 100 000 €</p>
+                <button onclick="addToCart('Audi RS3', 100000, 'img/rs3.png')">Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="img/rs6.png" alt="Audi RS6">
+                <h2>Audi RS6</h2>
+                <p>Prix: 150 000 €</p>
+                <button onclick="addToCart('Audi RS6', 150000, 'img/rs6.png')">Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="img/rs7.png" alt="Audi RS7">
+                <h2>Audi RS7</h2>
+                <p>Prix: 145 000 €</p>
+                <button onclick="addToCart('Audi RS7', 145000, 'img/rs7.png')">Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="img/r8.png" alt="Audi R8 GT">
+                <h2>Audi R8 GT</h2>
+                <p>Prix: 200 000 €</p>
+                <button onclick="addToCart('Audi R8 GT', 200000, 'img/r8.png')">Ajouter au panier</button>
+            </article>
+            <article class="product">
+                <img src="img/rsq8.png" alt="Audi RSQ8">
+                <h2>Audi RSQ8</h2>
+                <p>Prix: 130 000 €</p>
+                <button onclick="addToCart('Audi RSQ8', 130000, 'img/rsq8.png')">Ajouter au panier</button>
+            </article>
+        </section>
+    </main>
+    <div id="cart-menu">
+        <button class="close-button" onclick="closeCart()">×</button>
+        <ul id="cart-items"></ul>
+        <p>Montant total: <span id="total-cart-amount">0.00</span> €</p>
+        <button onclick="validatePayment()">Commander</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* global */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 2rem;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR */
+header nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 1em 0;
+}
+
+header nav h1 {
+    color: #e0e0e0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Barre de recherche */
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    background: #333;
+}
+
+#search-bar {
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+/* Bouton du panier */
+#cart {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#cart-button {
+    background-color: #ccc;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#cart-count {
+    background-color: #ff4444;
+    border-radius: 50%;
+    color: white;
+    padding: 0.2em 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+/* Styles pour le site de vente */
+main {
+    padding: 1em;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.product {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #ccc;
+}
+
+.product p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #ccc;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #bbb;
+}
+
+/* Styles pour le panier */
+#cart-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #2a2a2a;
+    border-left: 1px solid #444;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cart-menu.visible {
+    display: flex;
+}
+
+#cart-items img.cart-item-image {
+    width: 50px;
+    height: auto;
+    margin-right: 1em;
+    border-radius: 4px;
+}
+
+#cart-items li {
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    padding: 1em;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+.cart-item-name {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.cart-item-price {
+    font-size: 1em;
+    color: #ccc;
+    margin-left: auto;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.quantity-control button {
+    background-color: #ccc;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;  /* Réduit la taille des boutons */
+    margin: 0 0.2em;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.2em;  /* Ajustement de la position vers le haut */
+    right: 0.5em;  /* Ajustement de la position vers la droite */
+    background-color: #ff4444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 50%;
+}
+
+.close-button:hover {
+    background-color: #cc0000;
+}
